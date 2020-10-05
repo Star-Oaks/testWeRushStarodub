@@ -1,0 +1,24 @@
+.search-container{
+    width: calc(100% - 80px);
+    margin: 35px auto 35px;
+    height: 70px;
+    background-color: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    .search{
+        width: 90%;
+        height: 30px; 
+        margin-left: 30px;
+    } 
+    .search_icon{
+        width: 30px;
+        height: 30px;
+        background-image: url("../../../assets/search-icon.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 10px;
+    }
+    
+}

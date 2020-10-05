@@ -1,0 +1,24 @@
+.title {
+    color: black;
+    font-weight: 300;
+    text-align: center;
+    font-weight: bold;
+}
+.bar {
+    
+}
+.circle{
+    width: 115px;
+    height: 115px;
+    margin-top: 30px;
+    border-radius: 70px;
+    background-color: #159bd6;
+    background-image: url("../../../assets/video-game-related-line-icon.webp");
+    background-position: 250px 175px;
+    
+}
+.wrapper-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

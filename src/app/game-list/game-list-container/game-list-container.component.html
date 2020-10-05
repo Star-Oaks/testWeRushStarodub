@@ -1,0 +1,31 @@
+
+<ng-template [ngIf]="category && games" [ngIfElse]="loading">
+  <div class="wraper">
+    <button (click)="useLanguage('en')">en</button>
+<button (click)="useLanguage('ru')">ru</button>
+    <h1 class="header"> {{'gamelist.categoryHeader' | translate }}</h1>
+    <div class="сategory-container">
+      <div class="card" *ngFor="let item of category; " (click)="categoryFiler(item)">
+        <app-category-item [category]='item'></app-category-item>
+  
+      </div>
+  
+    </div>
+    <div class="search-container">
+      <app-search (onChange)="handleChange($event)"></app-search>
+    </div>
+    <div class="list-conter-headers" *ngIf="games">
+      <h1 class="header-list"> {{'gamelist.headerPopular' | translate }}</h1>
+      <span class="counter">{{games.length}}</span>
+    </div>
+  
+    <div class="list-container">
+      <app-game *ngFor="let item of games" [game]="item"></app-game>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #loading>
+  <div class="loading"></div>
+ </ng-template>

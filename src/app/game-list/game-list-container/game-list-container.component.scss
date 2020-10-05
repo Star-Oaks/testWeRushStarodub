@@ -1,0 +1,122 @@
+.wraper {
+  width: calc(100% - 60px);
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  flex-wrap: wrap;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .сategory-container {
+    height: 300px;
+    width: calc(100% - 130px);
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    @media screen and (max-device-width: 1366px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      height: auto;
+     }
+
+    .card {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      height: 280px;
+      flex: 1 1 255px;
+      background-color: #ffffff;
+      box-shadow: -1rem 0 1rem #747373;
+      border: 6px solid gray;
+      margin-left: -50px;
+      transition: 0.4s ease-out;
+      position: relative;
+      left: 25px;
+      cursor: pointer;
+      user-select: none;
+      @media screen and (max-device-width: 1366px) {
+        flex: 1 1 100px;
+        max-width: 270px;
+       }
+
+      &:not(:first-child) {
+        margin-left: -50px;
+      }
+
+      &:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+      }
+
+      &:hover~.card {
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+      }
+
+    }
+  }
+  .search-container{
+    width: 100%;
+  }
+  .list-conter-headers{
+    display: flex;
+    width:100%;
+    margin: 0px 0 35px 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .header-list{
+      width: max-content;
+      text-align: left;
+      margin-right: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
+  
+    }
+    .counter{
+      background-color: salmon;
+      color: white;
+      width: 40px;
+      height: 25px;
+      text-align: center;
+      padding-top: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .list-container {
+    width: calc(100% - 60px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    app-game{
+      flex: 1 1 270px;
+      max-width: 270px;
+      // margin: 0 auto;
+      &:nth-last-child(1){
+        flex: 0 1 270px;
+      }
+      // &:nth-last-child(1)::after {
+      //   content: '';
+      //   width: 200px;
+      // }
+    }
+  }
+}
+.loading{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/loader.gif");
+  background-size: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
