@@ -37,7 +37,7 @@ export class TranslatesService {
     }
   }
   setLocale(language: string) {
-    localStorage.setItem("locale", `/${language}`)
+    localStorage.setItem("locale", `${language}`)
   }
   getLocale() {
     return localStorage.getItem("locale")
