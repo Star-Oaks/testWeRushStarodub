@@ -13,7 +13,13 @@ export class TranslatesService {
     private router: Router) {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        this.chengeLocale(val.url)
+        if(val.url!=='/'){
+          this.chengeLocale(val.url)
+        }
+        else{
+          this.chengeLocale(this.getLocale())
+        }
+
       }
     })
 
